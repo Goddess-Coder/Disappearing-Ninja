@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disappearing ninja</title>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".colImgs").hover(function(){
+                $(this).addClass("hover");
+            },function () {
+                $(this).removeClass("hover");
+                $("td").off("mouseenter mouseleave");
+            });
+        });
+
+        $(document).ready(function(){
+            $(".colImgs").click(function () {
+                $(this).fadeOut();
+            });
+        });
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".colImgs").show();
+            })
+        });
+    </script>
+
+    <!-- styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="d.ninja.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 first_col">
+                <img class="colImgs" src="imgs/black ninja.jpg" alt="Black Ninja Kicks">
+                <img class="colImgs" src="imgs/black ninja.jpg" alt="Black Ninja Kicks">
+                <img class="colImgs" src="imgs/black ninja.jpg" alt="Black Ninja Kicks">
+                <img class="colImgs" src="imgs/black ninja.jpg" alt="Black Ninja Kicks">
+            </div>
+            <!-- first col -->
+        </div>
+        <!-- top row -->
+
+        <div class="row">
+                <div class="col-md-12 second_col">
+                    <img class="colImgs" src="imgs/black ninja.jpg" alt="Black Ninja Kicks">
+                    <img class="colImgs" src="imgs/black ninja.jpg" alt="Black Ninja Kicks">
+                    <img class="colImgs" src="imgs/black ninja.jpg" alt="Black Ninja Kicks">
+                    <img class="colImgs" src="imgs/black ninja.jpg" alt="Black Ninja Kicks">
+                </div>
+            <!-- second col -->
+        </div>
+        <!-- second row -->
+
+        <button class="btn btn btn-success">Restore</button>
+    </div>
+    <!-- container ends -->
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+</body>
+</html>
